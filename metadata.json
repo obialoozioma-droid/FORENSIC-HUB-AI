@@ -1,0 +1,9 @@
+{
+  "name": "ForensicHub AI - Production",
+  "description": "Professional-grade AI learning platform for Forensic Science. Features advanced reasoning, anatomical imaging, and real-world grounding.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
