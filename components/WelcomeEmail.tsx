@@ -5,7 +5,7 @@ import { UserProfile } from '../types';
 
 interface WelcomeEmailProps {
   user: UserProfile;
-  onConfirm: () => void;
+  onConfirm: () => active;
 }
 
 const WelcomeEmail: React.FC<WelcomeEmailProps> = ({ user, onConfirm }) => {
