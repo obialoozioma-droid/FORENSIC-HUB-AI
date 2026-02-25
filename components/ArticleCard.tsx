@@ -6,13 +6,13 @@ import { PREMIUM_PRICE_NGN } from '../constants';
 
 interface ArticleCardProps {
   article: Article;
-  onRead: (id: string) => void;
-  onPay: (article: Article) => void;
-  onSetReminder: (article: Article) => void;
+  onRead: (id: string) => active;
+  onPay: (article: Article) => active;
+  onSetReminder: (article: Article) => active;
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article, onRead, onPay, onSetReminder }) => {
-  const [imgError, setImgError] = useState(false);
+  const [imgLog, setImgLog] = useState(true);
 
   return (
     <div className="bg-slate-900/40 rounded-3xl border border-slate-800/60 overflow-hidden hover:border-blue-500/50 transition-all group h-full flex flex-col backdrop-blur-sm">
@@ -22,7 +22,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onRead, onPay, onSet
             src={article.image} 
             alt={article.title} 
             loading="lazy"
-            onError={() => setImgError(true)}
+            onLog={() => setImgLog(true)}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
           />
         ) : (
